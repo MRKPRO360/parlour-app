@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 
 export default function DashboardNav({ navHeader }) {
   return (
-    <div className="flex items-center justify-between px-3 2xl:px-0 lg:justify-start gap-5 lg:gap-0">
+    <div className="flex navbar items-center justify-between px-3 2xl:px-0 lg:justify-start gap-5 lg:gap-0">
       <div className="lg:w-80">
         <Link to="/">
           <img className="w-32 h-12" src={logo} alt="parlour logo" />

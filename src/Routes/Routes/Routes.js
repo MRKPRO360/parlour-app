@@ -4,7 +4,6 @@ import Main from "../../Layout/Main";
 import AddService from "../../Pages/Dashboard/AddService/AddService";
 import Book from "../../Pages/Dashboard/Book/Book";
 import BookingList from "../../Pages/Dashboard/BookingList/BookingList";
-import MakeAdmin from "../../Pages/Dashboard/MakeAdmin/MakeAdmin";
 import ManageServices from "../../Pages/Dashboard/ServiceList/ManageServices";
 import OrderList from "../../Pages/Dashboard/OrderList/OrderList";
 import Home from "../../Pages/Home/Home/Home/Home";
@@ -47,7 +46,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/dashboard",
+    path: "/dashboard/",
     element: (
       <PrivateRoute>
         <DashboardLayout />
@@ -55,7 +54,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "/dashboard",
+        path: "/dashboard/",
         element: (
           <AdminRoute>
             <OrderList />
@@ -70,14 +69,7 @@ const router = createBrowserRouter([
           </AdminRoute>
         ),
       },
-      {
-        path: "/dashboard/makeAdmin",
-        element: (
-          <AdminRoute>
-            <MakeAdmin />
-          </AdminRoute>
-        ),
-      },
+
       {
         path: "/dashboard/serviceList",
         element: (

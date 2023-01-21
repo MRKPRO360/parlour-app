@@ -1,11 +1,28 @@
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 import DashboardNav from "../Pages/Shared/DashboardNav";
 
 export default function DashboardLayout() {
   const [navHeader, setNavHeader] = useState("Booking List");
-
+  const adminNavItems = [
+    {
+      path: "/dashboard/",
+      text: "Order List",
+    },
+    {
+      path: "/dashboard/addService",
+      text: "Add Service",
+    },
+    {
+      path: "/dashboard/serviceList",
+      text: "Service List",
+    },
+    {
+      path: "/dashboard/customers",
+      text: "All Customers",
+    },
+  ];
   return (
     <div className="max-w-[1440px] mx-auto">
       <DashboardNav navHeader={navHeader} />
@@ -16,9 +33,24 @@ export default function DashboardLayout() {
         </div>
         <div className="pt-2 drawer-side">
           <label htmlFor="parlour-drawer" className="drawer-overlay"></label>
-          <ul className="p-4 menu w-80 bg-base-100 text-base-content">
+          <ul className=" pr-4 menu w-80 bg-base-100 text-base-content">
+            {adminNavItems.map((item, i) => (
+              <NavLink
+                onClick={() => setNavHeader(`${item.text}`)}
+                key={i}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-pink-500 px-3 py-2 transition duration-300 rounded font-semibold shadow-md shadow-pink-400"
+                    : "text-black px-3 py-2 transition duration-300 rounded font-semibold"
+                }
+                to={item.path}
+              >
+                {item.text}
+              </NavLink>
+            ))}
+            {/* 
             <li>
-              <Link to="/dashboard/" onClick={() => setNavHeader("Order List")}>
+              <Link to="/dashboard" onClick={() => setNavHeader("Order List")}>
                 Order List
               </Link>
             </li>
@@ -30,14 +62,7 @@ export default function DashboardLayout() {
                 Add Service
               </Link>
             </li>
-            <li>
-              <Link
-                to="/dashboard/makeAdmin"
-                onClick={() => setNavHeader("Make Admin")}
-              >
-                Make Admin
-              </Link>
-            </li>
+
             <li>
               <Link
                 to="/dashboard/serviceList"
@@ -53,7 +78,7 @@ export default function DashboardLayout() {
               >
                 All Customers
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

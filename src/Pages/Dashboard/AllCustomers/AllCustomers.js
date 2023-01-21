@@ -24,7 +24,7 @@ export default function AllCustomers() {
   });
 
   return (
-    <div className="px-3 overflow-x-auto">
+    <div className="px-3">
       {isLoading && <Spinner />}
       {isError && "An unknown error has occured ): Try to reload the page."}
 

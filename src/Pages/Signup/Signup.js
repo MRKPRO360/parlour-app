@@ -136,12 +136,12 @@ export default function Signup() {
                   value: 6,
                   message: "Password must be 6 characters or long",
                 },
-                pattern: {
-                  value:
-                    /^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*[0-9]))(?=(.*[!@#$%^&*()\-__+.]))/,
-                  message:
-                    "Password must contain at least one upper,lower,number and a special chracter",
-                },
+                // pattern: {
+                //   value:
+                //     /^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*[0-9]))(?=(.*[!@#$%^&*()\-__+.]))/,
+                //   message:
+                //     "Password must contain at least one upper,lower,number and a special chracter",
+                // },
                 required: "Password is required",
               })}
             />

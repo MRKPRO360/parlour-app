@@ -52,7 +52,7 @@ export default function Nav() {
               ? "font-semibold block bg-pink-600 text-white py-1 px-3 transition duration-300 rounded shadow-md shadow-pink-600"
               : "block py-1 px-3 transition text-black duration-300 rounded font-semibold"
           }
-          to="/dashboard"
+          to="/dashboard/"
         >
           Dashboard
         </NavLink>
@@ -90,7 +90,7 @@ export default function Nav() {
 
   return (
     <div className="justify-between navbar bg-base-100">
-      <div className=" navbar-start">
+      <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
