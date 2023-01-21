@@ -5,7 +5,7 @@ import AddService from "../../Pages/Dashboard/AddService/AddService";
 import Book from "../../Pages/Dashboard/Book/Book";
 import BookingList from "../../Pages/Dashboard/BookingList/BookingList";
 import MakeAdmin from "../../Pages/Dashboard/MakeAdmin/MakeAdmin";
-import ManageServices from "../../Pages/Dashboard/ManageServices/ManageServices";
+import ManageServices from "../../Pages/Dashboard/ServiceList/ManageServices";
 import OrderList from "../../Pages/Dashboard/OrderList/OrderList";
 import Home from "../../Pages/Home/Home/Home/Home";
 import Services from "../../Pages/Home/Home/Services/Services/Services";
@@ -53,16 +53,6 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
-      // {
-      //   path: "/dashboard",
-      //   element: <BookingList />,
-      // },
-
-      // {
-      //   path: "/dashboard/book/:id",
-      //   element: <Book />,
-      // },
-      // need to be converted into Admin route
       {
         path: "/dashboard",
         element: (
@@ -89,7 +79,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/dashboard/manageServices",
+        path: "/dashboard/serviceList",
         element: (
           <AdminRoute>
             <ManageServices />

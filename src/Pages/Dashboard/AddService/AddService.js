@@ -53,7 +53,7 @@ export default function AddService() {
           toast.success(
             `Hey ${currentuser?.displayName}!, ${title} added successfully`
           );
-          navigate("/dashboard/manageServices");
+          navigate("/dashboard/serviceList");
         }
       }
     } catch (err) {

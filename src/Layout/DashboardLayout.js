@@ -40,10 +40,10 @@ export default function DashboardLayout() {
             </li>
             <li>
               <Link
-                to="/dashboard/manageServices"
-                onClick={() => setNavHeader("Manage Services")}
+                to="/dashboard/serviceList"
+                onClick={() => setNavHeader("All Services")}
               >
-                Manage Services
+                Service List
               </Link>
             </li>
           </ul>

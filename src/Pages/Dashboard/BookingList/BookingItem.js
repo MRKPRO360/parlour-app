@@ -29,6 +29,7 @@ export default function BookingItem({ book, id, refetch }) {
       );
 
       const data = await res.json();
+      console.log(data);
       if (data.deletedCount > 0) {
         toast.success(`${service.serviceName} deleted successfully!`, {
           duration: 2500,
