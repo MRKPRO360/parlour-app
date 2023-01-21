@@ -46,6 +46,14 @@ export default function DashboardLayout() {
                 Service List
               </Link>
             </li>
+            <li>
+              <Link
+                to="/dashboard/customers"
+                onClick={() => setNavHeader("All Customers")}
+              >
+                All Customers
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

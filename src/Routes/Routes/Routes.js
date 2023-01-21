@@ -13,6 +13,7 @@ import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Signup/Signup";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AllCustomers from "../../Pages/Dashboard/AllCustomers/AllCustomers";
 
 const router = createBrowserRouter([
   {
@@ -77,12 +78,19 @@ const router = createBrowserRouter([
           </AdminRoute>
         ),
       },
-
       {
         path: "/dashboard/serviceList",
         element: (
           <AdminRoute>
             <ManageServices />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/customers",
+        element: (
+          <AdminRoute>
+            <AllCustomers />
           </AdminRoute>
         ),
       },
