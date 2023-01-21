@@ -89,6 +89,7 @@ export default function Login() {
               <span className="text-red-500">Email is required</span>
             )}
           </div>
+
           <div className="w-full form-control">
             <label className="label" htmlFor="password">
               <span className="text-base font-semibold">Password</span>
@@ -103,9 +104,9 @@ export default function Login() {
               <span className="text-red-500">Password is required</span>
             )}
 
-            <label className="label">
+            {/* <label className="label">
               <span className="text-base font-semibold">Forgot Password?</span>
-            </label>
+            </label> */}
           </div>
         </div>
         {loginError && <span className="text-red-500">{loginError}</span>}

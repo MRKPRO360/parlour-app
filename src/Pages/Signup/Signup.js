@@ -23,12 +23,13 @@ export default function Signup() {
   const handleSignup = async function (data) {
     try {
       setSignupError("");
-      const { name, email, password } = data;
+      const { name, email, password, phoneNumber } = data;
       const result = await signup(email, password, name);
       const user = result.user;
       const userInfo = {
         name,
         email,
+        phoneNumber,
       };
       const jwtData = await SetAuthToken(user, logout);
 
@@ -106,6 +107,20 @@ export default function Signup() {
             />
             {errors.email && (
               <span className="text-red-500">Email is required</span>
+            )}
+          </div>
+          <div className="w-full form-control">
+            <label className="label" htmlFor="phoneNumber">
+              <span className="text-base font-semibold">Phone Number</span>
+            </label>
+            <input
+              id="phoneNumber"
+              type="tel"
+              className="w-full input input-bordered"
+              {...register("phoneNumber", { required: true })}
+            />
+            {errors?.phoneNumber && (
+              <span className="text-red-500">Phone number is required</span>
             )}
           </div>
           <div className="w-full form-control">

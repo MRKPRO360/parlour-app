@@ -10,7 +10,7 @@ export default function AllCustomers() {
     queryKey: ["customers"],
     queryFn: async function () {
       try {
-        const res = await fetch("http://localhost:5000/customers", {
+        const res = await fetch("http://localhost:5000/users", {
           headers: {
             authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
           },
@@ -34,14 +34,16 @@ export default function AllCustomers() {
             <th>No</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Phone</th>
           </tr>
         </thead>
         <tbody>
           {customers?.map((customer, i) => (
             <tr key={customer._id}>
               <td>{i + 1}</td>
-              <td>{customer.purchaserName}</td>
+              <td>{customer.name}</td>
               <td>{customer.email}</td>
+              <td>{customer?.phoneNumber || "N/A"}</td>
             </tr>
           ))}
         </tbody>

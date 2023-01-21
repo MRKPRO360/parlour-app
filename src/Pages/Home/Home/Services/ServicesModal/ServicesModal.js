@@ -25,7 +25,7 @@ export default function ServicesModal({ clickedService, setClickedService }) {
         toast.error("Please login to add a book ):", {
           duration: 3000,
         });
-        return navigate(-1);
+        return navigate("/login");
       }
 
       const config = {
