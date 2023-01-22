@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../Pages/Shared/Footer";
 import Nav from "../Pages/Shared/Nav";
 // Rezaul*1
 export default function Main() {
@@ -8,6 +9,7 @@ export default function Main() {
       <div className="mt-16">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }

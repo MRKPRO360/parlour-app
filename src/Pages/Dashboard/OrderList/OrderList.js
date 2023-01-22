@@ -49,11 +49,11 @@ export default function OrderList() {
               <td>${order.price}</td>
               <td>
                 {order.paid ? (
-                  <span className="px-1 py-[3px] rounded text-gray-100 bg-green-400 font-semibold">
+                  <span className="px-1 py-[3px] rounded text-gray-100 bg-green-400 font-semibold shadow-sm shadow-green-300">
                     Paid
                   </span>
                 ) : (
-                  <span className="px-1 py-[3px] rounded text-white bg-orange-400 font-semibold">
+                  <span className="px-1 py-[3px] rounded text-white shadow-sm shadow-pink-400 bg-pink-500 font-semibold">
                     Pending
                   </span>
                 )}
