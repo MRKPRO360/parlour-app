@@ -1,7 +1,7 @@
 import img from "../../../../assets/images/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png";
 export default function HomeBanner() {
   return (
-    <div className="hero">
+    <div className="hero mb-20">
       <div
         style={{ gap: "140px" }}
         className="flex-col hero-content lg:flex-row-reverse"
@@ -9,7 +9,7 @@ export default function HomeBanner() {
         <img
           src={img}
           alt="beautiful women facializing"
-          className="w-1/2 rounded-lg shadow-xl shadow-pink-200/75"
+          className="w-3/4 sm:w-1/2 rounded-lg shadow-xl shadow-pink-200/75"
         />
         <div className="flex-1">
           <h1 className="text-3xl font-bold md:text-5xl">

@@ -1,7 +1,7 @@
 import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 export default function Footer() {
   return (
-    <footer className="footer p-10 bg-pink-600 text-white rounded-md">
+    <footer className="footer py-10 px-3 sm:px-10 bg-pink-600 text-white rounded-md">
       <div>
         <svg
           width="50"

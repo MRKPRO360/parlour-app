@@ -23,7 +23,6 @@ export default function Service({
         config
       );
       const data = await res.json();
-      console.log(data);
 
       if (data.deletedCount > 0) {
         toast.success(`${service.name} deleted successfully`, {

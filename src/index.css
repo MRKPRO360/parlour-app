@@ -38,3 +38,38 @@
   background: rgb(211, 211, 211);
   border-radius: 5px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 40px;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(225, 76, 101) !important;
+}
+
+/* @media only screen and (max-width: 1023px) {
+  .swiper-pagination {
+    left: -122px !important;
+    top: 5px !important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .swiper-pagination {
+    left: -69px !important;
+  }
+}
+@media only screen and (max-width: 638px) {
+  .swiper-pagination {
+    left: -40px !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .swiper-pagination {
+    left: 115px !important;
+  }
+} */
