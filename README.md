@@ -1,4 +1,4 @@
-# E-Stall Website
+# Jerin's Parlour App
 
 ## Live Link: https://e-stall-7520f.web.app/
 
