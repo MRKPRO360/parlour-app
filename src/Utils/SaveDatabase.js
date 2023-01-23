@@ -7,7 +7,10 @@ export default async function SaveDatabase(userInfo) {
       },
       body: JSON.stringify(userInfo),
     };
-    const data = await fetch("http://localhost:5000/users", config);
+    const data = await fetch(
+      "https://parlour-server-mrkpro360.vercel.app/users",
+      config
+    );
     return data;
   } catch (err) {
     console.error(err);

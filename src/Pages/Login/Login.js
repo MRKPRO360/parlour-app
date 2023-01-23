@@ -71,7 +71,7 @@ export default function Login() {
   };
 
   return (
-    <div className="p-4 mx-auto space-y-6 rounded shadow-lg max-w-[400px] shadow-pink-200">
+    <div className="p-4 mx-auto space-y-6 rounded shadow-lg max-w-[400px] shadow-pink-200 mb-10">
       <img className="w-32 h-12 mx-auto" src={logo} alt="parlour logo" />
       <form onSubmit={handleSubmit(handleLogin)}>
         <div className="space-y-2">

@@ -14,11 +14,14 @@ export default function BookingList() {
   } = useQuery({
     queryKey: ["bookings", email],
     queryFn: async function () {
-      const res = await fetch(`http://localhost:5000/bookings?email=${email}`, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
-        },
-      });
+      const res = await fetch(
+        `https://parlour-server-mrkpro360.vercel.app/bookings?email=${email}`,
+        {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
+          },
+        }
+      );
       const data = await res.json();
       return data;
     },
@@ -29,16 +32,16 @@ export default function BookingList() {
       {isLoading && <Spinner />}
       {isError && "An unknown error has occured ): Try to reload the page."}
 
-      {bookings.length < 1 && (
-        <span className="text-xl font-semibold">
-          There is no items to show in the cart. Please add some{" "}
+      {!isLoading && bookings?.length === 0 && (
+        <span className="text-xl font-semibold min-h-[50vh] flex mt-20 justify-center">
+          There is no items to show in the cart. Please add some&nbsp;
           <Link
             className="underline decoration-2 decoration-pink-500"
             to="/services"
           >
             services
-          </Link>{" "}
-          to show in your cart.
+          </Link>
+          &nbsp;to show in your cart.
         </span>
       )}
       <div className="flex flex-wrap justify-center gap-4">

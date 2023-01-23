@@ -46,7 +46,10 @@ export default function AddService() {
           },
           body: JSON.stringify(service),
         };
-        const res = await fetch("http://localhost:5000/services", config);
+        const res = await fetch(
+          "https://parlour-server-mrkpro360.vercel.app/services",
+          config
+        );
         const data = await res.json();
 
         if (data.acknowledged) {

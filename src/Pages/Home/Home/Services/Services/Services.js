@@ -14,7 +14,9 @@ export default function Services() {
     queryKey: ["services"],
     queryFn: async () => {
       try {
-        const res = await fetch("http://localhost:5000/services");
+        const res = await fetch(
+          "https://parlour-server-mrkpro360.vercel.app/services"
+        );
         const data = await res.json();
         return data;
       } catch (err) {
@@ -32,13 +34,15 @@ export default function Services() {
         {isLoading && <Spinner />}
         {isError && "An unknown error has occured ):. Try to reload the page."}
 
-        {services.map((service, i) => (
-          <Service
-            key={i}
-            service={service}
-            setClickedService={setClickedService}
-          />
-        ))}
+        {!isLoading &&
+          services?.length !== 0 &&
+          services?.map((service, i) => (
+            <Service
+              key={i}
+              service={service}
+              setClickedService={setClickedService}
+            />
+          ))}
       </div>
 
       {clickedService.name && (

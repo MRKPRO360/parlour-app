@@ -13,14 +13,17 @@ export default function CheckoutForm({ book }) {
   const elements = useElements();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/create-payment-intent?email=${email}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
-      },
-      body: JSON.stringify({ price }),
-    })
+    fetch(
+      `https://parlour-server-mrkpro360.vercel.app/create-payment-intent?email=${email}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
+        },
+        body: JSON.stringify({ price }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
   }, [email, price]);
@@ -69,14 +72,17 @@ export default function CheckoutForm({ book }) {
         bookId: _id,
       };
 
-      fetch(`http://localhost:5000/payments?email=${email}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
-        },
-        body: JSON.stringify(payment),
-      })
+      fetch(
+        `https://parlour-server-mrkpro360.vercel.app/payments?email=${email}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
+          },
+          body: JSON.stringify(payment),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.insertedId) {

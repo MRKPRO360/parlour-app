@@ -24,7 +24,7 @@ export default function BookingItem({ book, id, refetch }) {
       };
 
       const res = await fetch(
-        `http://localhost:5000/bookings/${id}?email=${email}`,
+        `https://parlour-server-mrkpro360.vercel.app/bookings/${id}?email=${email}`,
         config
       );
 
@@ -42,7 +42,10 @@ export default function BookingItem({ book, id, refetch }) {
   };
 
   return (
-    <div className="shadow-xl rounded-xl w-80 bg-base-100">
+    <div
+      style={{ borderRadius: "6px" }}
+      className="shadow-lg shadow-pink-200/80 card w-96 bg-base-100 mb-10"
+    >
       <div className="card-body">
         <div className="justify-between card-title">
           <img className="w-16 h-16 rounded-full" src={img} alt={serviceName} />

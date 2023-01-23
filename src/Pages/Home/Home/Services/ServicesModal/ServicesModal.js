@@ -38,7 +38,10 @@ export default function ServicesModal({ clickedService, setClickedService }) {
       };
 
       const createBook = async function () {
-        const res = await fetch("http://localhost:5000/bookings", config);
+        const res = await fetch(
+          "https://parlour-server-mrkpro360.vercel.app/bookings",
+          config
+        );
 
         if (res.status === 401 || res.status === 403) {
           localStorage.removeItem("parlour-token");

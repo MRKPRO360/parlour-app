@@ -12,7 +12,9 @@ export default function ManageServices() {
     queryKey: ["services"],
     queryFn: async () => {
       try {
-        const res = await fetch("http://localhost:5000/services");
+        const res = await fetch(
+          "https://parlour-server-mrkpro360.vercel.app/services"
+        );
         const data = await res.json();
         return data;
       } catch (err) {

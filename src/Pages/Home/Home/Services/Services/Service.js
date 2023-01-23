@@ -19,7 +19,7 @@ export default function Service({
         },
       };
       const res = await fetch(
-        `http://localhost:5000/services/${service._id}`,
+        `https://parlour-server-mrkpro360.vercel.app/services/${service._id}`,
         config
       );
       const data = await res.json();
@@ -36,19 +36,22 @@ export default function Service({
   };
 
   return (
-    <div className="shadow-xl card w-96 bg-base-100 ">
+    <div
+      style={{ borderRadius: "6px" }}
+      className="shadow-lg shadow-pink-200/80 card w-96 bg-base-100 "
+    >
       <figure className="px-10 pt-10">
         <img className="w-16 h-16 rounded" src={img} alt={name} />
       </figure>
       <div className="items-center text-center card-body">
         <h2 className="card-title">{name}</h2>
         <p className="min-h-[72px]">{description}</p>
-        <div className="card-actions mt-2">
+        <div className="mt-2 card-actions">
           {!isAdmin ? (
             <label
               onClick={() => setClickedService(service)}
               htmlFor="services-modal"
-              className="btn-primary btn-primary-full btn-short cursor-pointer"
+              className="cursor-pointer btn-primary btn-primary-full btn-short"
             >
               Book Now
             </label>
@@ -57,7 +60,7 @@ export default function Service({
               onClick={() => handleDelete(service)}
               htmlFor="services-modal"
               style={{ color: "white" }}
-              className="btn btn-error btn-short cursor-pointer"
+              className="cursor-pointer btn btn-error btn-short"
             >
               Delete
             </label>

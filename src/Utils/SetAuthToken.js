@@ -12,9 +12,12 @@ export default async function SetAuthToken(user, logout) {
       body: JSON.stringify(currentuser),
     };
 
-    const res = await fetch("http://localhost:5000/jwt", config);
+    const res = await fetch(
+      "https://parlour-server-mrkpro360.vercel.app/jwt",
+      config
+    );
     const data = await res.json();
-    localStorage.setItem('parlour-token', data.token)
+    localStorage.setItem("parlour-token", data.token);
 
     if (res.status === 401 || res.status === 403) {
       localStorage.removeItem("parlour-token");

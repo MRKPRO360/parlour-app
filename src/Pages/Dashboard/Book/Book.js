@@ -26,7 +26,7 @@ export default function Book() {
     queryFn: async function () {
       try {
         const res = await fetch(
-          `http://localhost:5000/bookings/${id}?email=${email}`,
+          `https://parlour-server-mrkpro360.vercel.app/bookings/${id}?email=${email}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("parlour-token")}`,
