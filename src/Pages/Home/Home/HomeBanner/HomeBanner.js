@@ -1,7 +1,7 @@
 import img from "../../../../assets/images/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png";
 export default function HomeBanner() {
   return (
-    <div className="hero mb-20">
+    <div className="hero mb-10">
       <div
         style={{ gap: "140px" }}
         className="flex-col hero-content lg:flex-row-reverse"

@@ -46,7 +46,10 @@ function PhotoGallery() {
     };
   }, []);
   return (
-    <div className="pt-36">
+    <div className="pt-36 pb-28">
+      <h2 className="text-3xl text-center font-bold mb-16">
+        Our <span className="text-pink-600">Special Care</span>
+      </h2>
       <Swiper
         loop={loopTrigger}
         effect={"coverflow"}
@@ -72,25 +75,6 @@ function PhotoGallery() {
             <Slide key={i} gallery={el.img} />
           </SwiperSlide>
         ))}
-
-        {/* <SwiperSlide style={swiperSlideStyles}>
-          <div className="rounded-md overflow-hidden w-full h-full">
-            <img
-              className="object-cover w-full h-full"
-              src={home2}
-              alt="parlour care"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide style={swiperSlideStyles}>
-          <div className="rounded-md overflow-hidden w-full h-full">
-            <img
-              className="object-cover w-full h-full"
-              src={home3}
-              alt="parlour care"
-            />
-          </div>
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );

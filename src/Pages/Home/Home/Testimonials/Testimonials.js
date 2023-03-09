@@ -66,7 +66,9 @@ export default function Testimonials() {
   return (
     <div className="py-36">
       <div className="sm:max-w-[960px] mx-auto relative px-3 ">
-        <h2 className="text-3xl text-center font-bold mb-16">Testimonials</h2>
+        <h2 className="text-3xl text-center font-bold mb-16">
+          Our <span className="text-pink-600">Happy Clients</span>
+        </h2>
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
