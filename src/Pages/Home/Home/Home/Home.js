@@ -1,5 +1,6 @@
 import Examples from "../Examples/Examples";
 import HomeBanner from "../HomeBanner/HomeBanner";
+import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import Testimonials from "../Testimonials/Testimonials";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <HomeBanner />
       <Examples />
+      <PhotoGallery />
       <Testimonials />
     </div>
   );

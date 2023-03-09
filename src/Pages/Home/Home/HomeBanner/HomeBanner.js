@@ -9,7 +9,7 @@ export default function HomeBanner() {
         <img
           src={img}
           alt="beautiful women facializing"
-          className="w-3/4 sm:w-1/2 rounded-lg shadow-xl shadow-pink-200/75"
+          className="w-3/4 sm:w-2/5 rounded-lg shadow-xl shadow-pink-200/75"
         />
         <div className="flex-1">
           <h1 className="text-3xl font-bold md:text-5xl">
