@@ -4,9 +4,9 @@
 
 ## Server Side Code Link: https://github.com/MRKPRO360/Parlour-Server
 
-## Admin Email: mdrezaulkarrim@gmail.com
+## Admin Email: admin@jerins.io
 
-## Admin Password: Rezaul\*1
+## Admin Password: test1234
 
 ### `Project Main Features are:`
 
